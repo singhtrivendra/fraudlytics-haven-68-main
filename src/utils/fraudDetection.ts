@@ -1,27 +1,9 @@
 
 import { toast } from "@/hooks/use-toast";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-require('dotenv').config();
-
-const express = require('express');
-const mongoose = require('mongoose');
-
-const app = express();
-
-const DB_URL = process.env.DATABASE_URL;
-const PORT = process.env.PORT || 3000;
-
-// Connect to MongoDB
-mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("Connected to MongoDB"))
-  .catch(err => console.error("MongoDB connection error:", err));
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
 
 // Initialize the Google Generative AI client
-const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || "AIzaSyA7WL5Pisv7OhJ8XReH1d-erUTFwjoeh48");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // Fraud detection thresholds
