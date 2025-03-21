@@ -1,4 +1,4 @@
-## PROJECT LINK :- [Your Project URL Here]
+## PROJECT LINK :- https://fraudlytics-haven-68-main.vercel.app/
 
 # 🚀 Fraud Detection, Alert, and Monitoring (FDAM) System
 
